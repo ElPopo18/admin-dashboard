@@ -14,6 +14,8 @@
   --sidebar-items-gap: 17px;
   --main-blue-color: #1992d4;
   --main-font-color: white;
+  --main-font-size: 18px;
+  --main-content-text-size: 15px;
 }
 
 body {
@@ -21,6 +23,7 @@ body {
 }
 
 .container {
+  height: 100vh;
   display: grid;
   grid-template-columns: 1fr 5fr;
   grid-template-rows: 1fr 5fr;
@@ -126,7 +129,7 @@ input:focus {
 
 .user-name {
   font-weight: var(--weight-font);
-  font-size: 18px;
+  font-size: var(--main-font-size);
 }
 
 .user-pfp img {
@@ -162,4 +165,73 @@ input:focus {
 
 .main-content {
   background-color: #e2e8f0;
+  padding: 30px 50px 30px 20px;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.container-your-projects,
+.container-announcements,
+.container-trending {
+  border: 1px solid red;
+}
+
+.container-your-projects{
+  grid-row: 1 / 3;
+}
+
+.your-projects {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.project-card {
+  display: grid;
+  grid-template-columns: 9px 1fr;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.project-side {
+  background: #f0b429;
+}
+
+.project-content {
+  background: white;
+  min-height: 190px;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project-buttons {
+  align-self: flex-end;
+  display: flex;
+  gap: 30px;
+}
+
+.project-text h3 {
+  font-size: var(--main-font-size);
+}
+
+.project-text p,
+.announcement-content p,
+.trending-text p{
+  color: #646464;
+}
+
+.project-text p {
+  margin-top: 4px;
+  font-size: var(--main-content-text-size);
+}
+
+.project-buttons svg {
+  height: var(--svg-icons-size);
+  width: var(--svg-icons-size);
 }
