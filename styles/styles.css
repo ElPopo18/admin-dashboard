@@ -270,3 +270,8 @@ input:focus {
   margin-top: 4px;
   font-size: 12px;
 }
+
+.trending-project {
+  display: flex;
+  gap: 20px;
+}
